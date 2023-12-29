@@ -1,0 +1,29 @@
+{
+  "name": "day2ignitingourapp",
+  "version": "1.0.0",
+  "description": "Learning",
+  "main": "2.2App.js",
+  "scripts": {
+    "start": "parcel 2.1index.html",
+    "build": "parcel build 2.1index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAYUR-KHARDE/Namaste-React-_-Zero-to-hero.git"
+  },
+  "author": "Mayur Kharde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MAYUR-KHARDE/Namaste-React-_-Zero-to-hero/issues"
+  },
+  "homepage": "https://github.com/MAYUR-KHARDE/Namaste-React-_-Zero-to-hero#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
