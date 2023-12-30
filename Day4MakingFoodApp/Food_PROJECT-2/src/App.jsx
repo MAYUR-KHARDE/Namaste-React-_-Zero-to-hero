@@ -14,10 +14,48 @@ import Card from "./Card/Card.jsx";
 // -Name
 // -Rating
 // -cuisness
-//***************Footer**************************
-// links
-// copyrights
-
+const data = [
+  {
+    itemName: "Margherita Pizza",
+    img: "https://source.unsplash.com/800x800/?pizza",
+  },
+  {
+    itemName: "Spaghetti Bolognese",
+    img: "https://source.unsplash.com/900x900/?spaghetti",
+  },
+  {
+    itemName: "Chicken Alfredo Pasta",
+    img: "https://source.unsplash.com/900x900/?pasta",
+  },
+  {
+    itemName: "Sushi Platter",
+    img: "https://source.unsplash.com/900x900/?sushi",
+  },
+  {
+    itemName: "Grilled Salmon",
+    img: "https://source.unsplash.com/900x900/?salmon",
+  },
+  {
+    itemName: "Caesar Salad",
+    img: "https://source.unsplash.com/900x900/?salad",
+  },
+  {
+    itemName: "Tandoori Chicken",
+    img: "https://source.unsplash.com/900x900/?tandoori",
+  },
+  {
+    itemName: "Chocolate Fondue",
+    img: "https://source.unsplash.com/900x900/?chocolate",
+  },
+  {
+    itemName: "Mango Smoothie",
+    img: "https://source.unsplash.com/900x900/?smoothie",
+  },
+  {
+    itemName: "Garlic Butter Shrimp",
+    img: "https://source.unsplash.com/900x900/?shrimp",
+  },
+];
 const Header = () => {
   return (
     <div className="header">
@@ -48,46 +86,15 @@ const BODY = () => {
         <input type="text" placeholder="Search what you Wanna Eat " />
       </div>
       <div className="card1">
-        <Card
-          itemName="Margherita Pizza"
-          img="https://source.unsplash.com/800x800/?pizza"
-        ></Card>
-        <Card
-          itemName="Spaghetti Bolognese"
-          img="https://source.unsplash.com/900x900/?spaghetti"
-        ></Card>
-        <Card
-          itemName="Chicken Alfredo Pasta"
-          img="https://source.unsplash.com/900x900/?pasta"
-        ></Card>
-        <Card
-          itemName="Sushi Platter"
-          img="https://source.unsplash.com/900x900/?sushi"
-        ></Card>
-        <Card
-          itemName="Grilled Salmon"
-          img="https://source.unsplash.com/900x900/?salmon"
-        ></Card>
-        <Card
-          itemName="Caesar Salad"
-          img="https://source.unsplash.com/900x900/?salad"
-        ></Card>
-        <Card
-          itemName="Tandoori Chicken"
-          img="https://source.unsplash.com/900x900/?tandoori"
-        ></Card>
-        <Card
-          itemName="Chocolate Fondue"
-          img="https://source.unsplash.com/900x900/?chocolate"
-        ></Card>
-        <Card
-          itemName="Mango Smoothie"
-          img="https://source.unsplash.com/900x900/?smoothie"
-        ></Card>
-        <Card
-          itemName="Garlic Butter Shrimp"
-          img="https://source.unsplash.com/900x900/?shrimp"
-        ></Card>
+        {data.map((iterator) => {
+          return (
+            <Card
+              itemName={iterator.itemName}
+              img={iterator.img}
+              key={iterator.itemName}
+            />
+          );
+        })}
       </div>
     </div>
   );
